@@ -31,8 +31,8 @@ namespace isdectree {
 	}
 	
 	void util_freenode(Node *node) {
-		if(node.left != nullptr) util_freenode(node.left);
-		if(node.right != nullptr) util_freenode(node.right);
+		if(node->left != nullptr) util_freenode(node->left);
+		if(node->right != nullptr) util_freenode(node->right);
 		delete node; // node should be allocated with operator new in algorithm_* function family
 	}
 }
