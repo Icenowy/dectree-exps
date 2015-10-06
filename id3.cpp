@@ -7,6 +7,7 @@ namespace isdectree {
 	double algorithm_id3_entropy(const DatasetMetadata &meta, const std::vector<Datum> &data) {
 		double entropy = 0;
 		int len = data.size();
+		if(!len) return 0;
 		for(EnumType i = 0;i<=meta.maxresult;i++) {
 			int count = 0;
 			for(int j = 0;j<len;j++) {
@@ -28,7 +29,6 @@ namespace isdectree {
 		double entropy_new = (leftlen/len) * entropy_left + (1-leftlen/len) * entropy_right;
 		return original_entropy - entropy_new;
 	}
-	/*Node *algorithm_id3(const DatasetMetadata &meta, const std::vector<Datum> &data) {
-		
-	}*/
+	Node *algorithm_id3(const DatasetMetadata &meta, const std::vector<Datum> &data) {
+	}
 }
