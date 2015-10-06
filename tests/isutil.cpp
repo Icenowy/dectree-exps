@@ -38,7 +38,7 @@ int main()
 
 	std::pair<std::vector<isdectree::Datum>, std::vector<isdectree::Datum> > dtvpr = util_datadivide(dv,dtv);
 	assert(dtvpr.first.size() == 1);
-	assert(dtvpr.first.size() == 1);
+	assert(dtvpr.second.size() == 1);
 
 	return 0;
 }
