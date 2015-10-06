@@ -16,7 +16,7 @@ namespace isdectree {
 		std::set<EnumType> judgment;
 		NumberType threshold;
 	};
-	class Node {
+	struct Node {
 		Divide statement;
 		Node *left, *right;
 		int result;
