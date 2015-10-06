@@ -25,7 +25,6 @@ namespace isdectree {
 		// Enum: not in judgment
 	};
 	struct DatasetMetadata {
-		int length;
 		int number_count;
 		int enum_count;
 		EnumType maxenum;
