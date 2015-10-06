@@ -1,3 +1,6 @@
+#ifndef _ISDECTREE_ISDECTREE_H
+#define _ISDECTREE_ISDECTREE_H
+
 namespace isdectree {
 	typedef unsigned int EnumType;
 	enum ParamaterType {
@@ -15,3 +18,5 @@ namespace isdectree {
 		// Enum: not in judgment
 	}
 }
+
+#endif
