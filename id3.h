@@ -4,7 +4,7 @@
 #include "isdectree.h"
 
 namespace isdectree {
-	Node *algorithm_id3(const DatasetMetadata &meta, const std::vector<Datum> &results);
+	Node *algorithm_id3(const DatasetMetadata &meta, const std::vector<Datum> &data);
 }
 
 #endif
