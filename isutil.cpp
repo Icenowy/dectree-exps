@@ -20,6 +20,7 @@ namespace isdectree {
 		}
 		
 	}
+	
 	std::pair<std::vector<Datum>, std::vector<Datum> > util_datadivide(const Divide &divide, const std::vector<Datum> original) {
 		std::vector<Datum> left,right;
 		for(const Datum & datum : original) {
@@ -27,5 +28,11 @@ namespace isdectree {
 			else left.push_back(datum);
 		}
 		return std::make_pair(left,right);
+	}
+	
+	void util_freenode(Node *node) {
+		if(node.left != nullptr) util_freenode(node.left);
+		if(node.right != nullptr) util_freenode(node.right);
+		delete node; // node should be allocated with operator new in algorithm_* function family
 	}
 }
