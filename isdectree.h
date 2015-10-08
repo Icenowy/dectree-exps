@@ -19,7 +19,7 @@ namespace isdectree {
 	struct Node {
 		Divide statement;
 		Node *left, *right;
-		int result;
+		int result; //When it's a leaf, result is set to -1
 		// Left: 
 		// Number: <threshold
 		// Enum: not in judgment
@@ -27,7 +27,7 @@ namespace isdectree {
 	struct DatasetMetadata {
 		int number_count;
 		int enum_count;
-		EnumType maxenum;
+		std::vector<EnumType> maxenum;
 		EnumType maxresult;
 	};
 	struct Datum {

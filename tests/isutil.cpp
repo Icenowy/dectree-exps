@@ -1,5 +1,6 @@
 #include <isutil.h>
 #include <cassert>
+#include <iostream>
 
 int main()
 {
@@ -39,6 +40,8 @@ int main()
 	std::pair<std::vector<isdectree::Datum>, std::vector<isdectree::Datum> > dtvpr = util_datadivide(dv,dtv);
 	assert(dtvpr.first.size() == 1);
 	assert(dtvpr.second.size() == 1);
+
+	std::cout << util_divide_stringize(dv) << std::endl;
 
 	return 0;
 }
